@@ -1,0 +1,92 @@
+//colors 
+$black: black;
+$blue-nav: rgb(44, 44, 84);
+$white: white;
+$darkBlue: #0C0B10;
+$lightWhite: #FCFCFC;
+$whitel: #FCFCFC;
+$brown: #79655E;
+$greyBlack: #1D1A1A;
+
+$mobH: #E2D3CE;
+
+// scroll
+
+$transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+
+// calc 
+
+
+
+
+// mixin
+
+@mixin layers {
+    height: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@mixin decor {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+@mixin buttonMenu {
+    &::before {
+        content: 'Call Me Back';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 100%;
+        height: 41px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: $black;
+        z-index: 10;
+       
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        height: 41px;
+        border-radius: 61px;
+        transition: .4s;
+        transform: scale(0);
+    }
+    &:hover::after {
+        background: $white;
+        transform: scale(1);
+    }
+}
+
+// button slide 
+
+@mixin slideButton {
+    border: 0;
+    position: absolute;
+    top: 60%;
+    width: 75px;
+    height: 75px;
+    z-index: 20;
+    background: #79655E;
+    transform: rotate(-45deg);
+    transition: .5s ease;
+}

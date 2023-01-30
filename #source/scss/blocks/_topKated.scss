@@ -1,0 +1,259 @@
+.top-kated {
+    margin-top: 109px;
+    &__title-kated {
+        position: relative;
+        text-align: center;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 58px;
+
+        color: $darkBlue;
+        z-index: 100;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: url('../img/topKated/decor-title.svg');
+            width: 112px;
+            height: 212px;
+            z-index: -1;
+        }
+    }
+    &__body {
+        position: relative;
+    }
+}
+
+.filter {
+    margin: 58px 0 35px;
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+    &__tab {
+        border: 0;
+        background: none;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 98.5%;
+
+        color: $brown;
+    }
+
+    @media (max-width: 1000px) {
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 70px;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            width: 0; 
+        }
+    }
+
+}
+
+.active-tab {
+    color: $darkBlue;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        background: url('../img/topKated/icon.svg');
+        width: 18px;
+        height: 12px;
+    }
+}
+
+// slider
+
+.slider {
+    display: flex;
+    flex-shrink: 0;
+    width: 350px;
+    height: 570px; 
+    gap: 30px;
+}
+
+.swiper-wrapper {
+    display: inline-flex;
+}
+
+.slide {
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: flex-end;
+    z-index: 2;
+    transition: .5s;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 335px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0B2034 100%);
+        z-index: -1;
+    }
+
+    &__slide-bottom {
+        padding: 35px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__slide-text {
+        display: flex;
+        align-items: center;
+        
+        &::before {
+            content: '';
+            display: block;
+            background: url('../img/topKated/lamp.svg') no-repeat;
+            width: 11px;
+            height: 11px;
+            margin-right: 5px;
+        }
+    }
+
+    &__slide-text, &__price-text, &__grade {
+        font-family: 'Manrope';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $white;
+    }
+    
+    &__slide-title {
+        margin: 3px 0 30px;
+        max-width: 251px;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 98.5%;
+        color: $white;
+    }
+
+    &__price-text {
+        text-transform: uppercase;
+    }
+    
+    &__slide-number {
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 98.5%;
+
+        color: $white;
+    }
+
+    &__rating {
+        margin-top: auto;
+    }
+
+    &__rating-result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__rating-result span {
+        color: $white;
+        &::before {
+            content: '◊';
+        }
+    }
+
+    .rating-active {
+        color: $white;
+        &::before {
+            content: '⧫';
+        }
+    }
+
+    // slide button 
+
+    &__slide-button {
+        @include slideButton;
+
+        &:hover {
+            background: #87746c;
+        }
+    }
+
+    &__slide-img {
+        transform: rotate(45deg);
+    }
+
+    &__prev-arrow {
+        transform: rotate(-135deg);
+    }
+}
+
+.slide--active {
+    transform: translateX(-350px);
+}
+
+.swiper-button-prevs {
+    left: 0;
+    &.swiper-button-disabled {
+        display: none;
+    }
+}
+
+.swiper-button-nexts {
+    right: -50px;
+    &.swiper-button-disabled {
+        display: none;
+    }
+    @media (max-width: 1260px) {
+        right: 0;
+    }
+}
+
+.swiper-pagination {
+    display: none;
+    span {
+        position: relative;
+        bottom: -34px;
+        border-radius: 0;
+        width: 38px;
+        height: 2px;
+    }
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+        background: $white;
+    } 
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: $brown;
+      }
+
+
+    @media (max-width: 1000px) {
+        display: block;
+    }
+}
+
+
+

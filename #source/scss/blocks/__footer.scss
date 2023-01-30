@@ -1,0 +1,122 @@
+.footer {
+    position: relative;
+
+    padding: clamp(0rem, calc(-47.25rem + 72vw), 6.75rem) 0 34px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+      &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            background-image: url('../img/footer/bg_footer.jpg');
+            background-position: center 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 755px;
+            z-index: -1;
+        }
+
+    // &__bg {
+    //     position: relative;
+    //     &::before {
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         background-image: url('../img/footer/bg_footer.jpg');
+    //         background-repeat: no-repeat;
+    //         background-size: cover;
+    //         width: 100%;
+    //         height: 555px;
+    //     }
+    // }
+
+    &__logo {
+        margin-bottom: clamp(2.438rem, calc(1.074rem + 6.82vw), 6.188rem);
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        margin: -45px 0 125px;
+        padding-right: 65px;
+        @media (max-width: 950px) {
+            margin: 46px 0 75px;
+            padding-right: 0;
+
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px 59px;
+            max-width: 289px;
+        }
+    }
+
+    &__nav span {
+        margin-left: 31px;
+        margin-right: 31px;
+
+        &:nth-child(2) {
+            margin-right: 133px;
+            @media (max-width: 950px) {
+                margin: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-left: 133px;
+            @media (max-width: 950px) {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 950px) {
+            margin: 0;;
+        }
+    }
+
+    &__href {
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        
+        text-transform: uppercase;
+
+        color: #0C0B10; 
+    }
+
+    &__bottom {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        font-family: 'Manrope';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+
+        color: #FFFFFF;
+        @media (max-width: 950px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+}
+
+.button-f {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+    @include buttonMenu;
+}

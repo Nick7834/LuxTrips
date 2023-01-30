@@ -1,0 +1,305 @@
+.review {
+    margin-top: 145px;
+    position: relative;
+    padding-bottom: 100px;
+
+        &::after {
+            content: '';
+            background: url('../img/review/bg_contact.png') no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            bottom: -600px;
+            height: 1014px;
+            width: 100%;
+            z-index: -2;
+        }
+
+    &__block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 auto 89px;
+        position: relative;
+        max-width: 263px;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 58px;
+        text-align: center;
+
+        color: $darkBlue;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: url(../img/topKated/decor-title.svg);
+            width: 112px;
+            height: 212px;
+            z-index: -1;
+        }
+    }
+
+    // review card
+
+    &__cards {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    // decore
+
+    &__card-body {
+        max-width: 100%;
+        flex-shrink: 0;
+        height: auto;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 10px;
+            bottom: -9px;
+            left: 10px;
+            height: 9px;
+            border: 1px solid #fff;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            z-index: -1;
+        }
+    }
+
+     &__card {
+        position: relative;
+        height: 100%;
+        padding: clamp(4.625rem, calc(4.92rem + -1.48vw), 3.813rem) 
+        clamp(1.75rem, calc(0.455rem + 6.48vw), 5.313rem)
+        clamp(4rem, calc(3.705rem + 1.48vw), 4.813rem);
+        border-bottom: 1px solid $white;
+        border-radius: 10px;
+        backdrop-filter: blur(15px);
+        
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            width: calc(50% - 70px);
+            border: 1px solid #fff;
+            z-index: -1;
+        }
+
+        &::before {
+            left: 0;
+            border-right: none;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &::after {
+            right: 0;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    &__card-decore {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            bottom: -1px;
+            width: calc(50% - 104px);
+            border: 1px solid #fff;
+            z-index: -1;
+        }
+
+        &::before {
+            left: 13px;
+            height: 16px;
+            border-right: none;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &::after {
+            bottom: auto;
+            right: 13px;
+            height: 16px;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+
+    }
+
+    &__card-decore svg {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        width: 48px;
+        height: 20px;
+        transform: translateX(-50%);
+    }
+
+    // content
+
+    &__card-avatar {
+        position: relative;
+        background: url('../img/review/avatar-one.png') no-repeat;
+        width: 102px;
+        height: 102px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 10px;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(10px); 
+        }
+
+        @media (max-width: 620px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        margin: 36px 0 clamp(1.75rem, calc(-0.295rem + 10.23vw), 7.375rem);
+        max-width: 481px;
+
+        font-family: 'Manrope';
+        font-weight: 300;
+        font-size: clamp(1.125rem, calc(1.057rem + 0.34vw), 1.313rem);
+        line-height: 37px;
+
+        color: $greyBlack;
+    }
+
+    &__name {
+        margin-bottom: 6px;
+        font-family: 'Manrope';
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 95%;
+        
+        color: $greyBlack;
+    }
+
+    &__cite {
+        font-family: 'Manrope';
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 95%;
+
+        color: $greyBlack;
+    }
+
+    &__slide-button {
+        right: -50px;
+        @include slideButton;
+
+        &:hover {
+            background: #87746c;
+        }
+    }
+
+    &__slide-img {
+        transform: rotate(45deg);
+    }
+
+    &__left {
+        left: -50px;
+    }
+
+    &__left-img {
+        transform: rotate(-135deg);
+    }
+
+}
+
+.review__left {
+    &.swiper-button-disabled {
+        display: none;
+    }
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.review__right {
+    &.swiper-button-disabled {
+        display: none;
+    }
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.review-blocks {
+    display: flex;
+    width: 100%;
+    max-width: 636px;
+
+    @media (max-width: 620px) {
+        text-align: center;
+    }
+}
+
+.swiper-pagination-rev {
+    display: block;
+    span {
+        position: relative;
+        bottom: -70px;
+        border-radius: 0;
+        max-width: 100px;
+        width: 100%;
+        height: 2px;
+
+       
+    }
+
+    .swiper-pagination-bullet {
+        opacity: .6;
+        background: $white;
+      }
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: $white;
+      }
+
+    @media (max-width: 1000px) {
+        span {
+            position: relative;
+            bottom: -70px;
+            border-radius: 0;
+            width: 38px;
+            height: 2px;
+        }
+
+        .swiper-pagination-bullet {
+            opacity: 1;
+            background: $white;
+        } 
+    
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: $brown;
+        }
+    }
+}

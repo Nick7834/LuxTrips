@@ -1,0 +1,627 @@
+.information {
+    position: relative;
+
+    &::before {
+        content: '';
+
+        background: url('../img/information/book-background.png');
+
+        position: absolute;
+        top: -555px;
+        width: 100%;
+        height: clamp(47.813rem, calc(37.926rem + 49.43vw), 75rem);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: center center;
+    }
+}
+
+.book {
+
+    &__book-title {
+        margin-bottom: 73px;
+        position: relative;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 58px;
+
+        text-align: center;
+        color: $darkBlue;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: url('../img/topKated/decor-title.svg');
+            width: 112px;
+            height: 212px;
+            z-index: -1;
+        }
+    }
+
+    &__img-book {
+        width: 100%;
+    }
+
+    &__booking {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__booking-cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        width: 540px;
+        height: 191px;
+    }
+
+    &__booking-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 98.5%;
+        
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        
+        color: $white;
+        z-index: 2;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            background: url('../img/information/romb-horiz.svg');
+            width: 141px;
+            height: 75px;  
+            z-index: -1;          
+        }
+    }
+}
+
+
+// trip block
+
+.trip {
+    
+    &__lux-trips {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__lux-block-one, &__lux-block-two {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+    }
+
+    &__lux-block-one {
+        margin-top: 122px;
+    }
+
+    &__lux-block-two {
+        margin: 221px 0 57px;
+        @media (max-width: 480px) {
+           margin-bottom: 34px;
+        }
+    }
+
+    &__lux-title {
+        margin: 0;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: clamp(2.5rem, calc(2.012rem + 2.44vw), 3.75rem);
+        line-height: clamp(2.75rem, calc(2.409rem + 1.71vw), 3.625rem);
+
+        color: $darkBlue;
+    }
+
+    &__min {
+        margin-right: clamp(1.25rem, calc(0.152rem + 5.49vw), 4.063rem);
+        @media (max-width: 480px) {
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+
+    &__big {
+        margin-right: 28px;
+        max-width: 256px;
+        font-size: 40px;
+        line-height: 40px;
+        @media (max-width: 480px) {
+            margin-right: 0;
+        }
+    }
+
+    &__lux-text {
+        max-width: 254px;
+        
+        font-family: 'Manrope';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 179.8%;
+
+        color: $black;
+
+        @media (max-width: 480px) {
+           max-width: 100%;
+        }
+    }
+
+    &__mob-pad {
+        @media (max-width: 480px) {
+            margin: 23px 0 16px;
+        }
+    }
+
+    &__text-mob {
+        display: none;
+        @media (max-width: 480px) {
+            display: block;
+        }
+    }
+
+    &__lux-text-big {
+        max-width: 263px;
+    }
+
+    &__lux-text-q {
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    // gallery 
+
+    &__lux-gallery {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__lux-photo-one {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            top: -32px;
+            left: -62px;
+            width: 244px;
+            height: 115%;
+            background: url('../img/information/photo-one-decor.png') no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__lux-photo-decore {
+        position: relative;
+        bottom: -100px;
+        @media (max-width: 480px) {
+            bottom: -62px;
+            right: 51px;
+        }
+    }
+
+    &__lux-photo-two {
+        position: relative;
+        bottom: -100px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            top: -12px;
+            left: -28px;
+            width: 123px;
+            height: 115%;
+            background: url('../img/information/photo-two-decor.png') no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &__lux-photo-three {
+        position: relative;
+        bottom: -200px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            top: -12px;
+            left: -41px;
+            width: 222px;
+            height: 115%;
+            background: url('../img/information/photo-three-decor.png') no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    // block lux
+
+    &__lux-block-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: clamp(1.063rem, calc(-0.718rem + 8.9vw), 5.625rem);
+        @media (max-width: 480px) {
+            gap: 30px;
+        }
+    }
+
+    &__lux-imgs {
+        position: relative;
+        margin-left: clamp(-3.75rem, calc(-5.213rem + 7.32vw), 0rem);
+        flex-shrink: 0;
+      
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -26px;
+            left: -30px;
+            width: 352px;
+            height: 115%;
+            background: url('../img/information/blur-trip-img.png') no-repeat;
+            background-size: contain;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 113px;
+            right: clamp(-1.125rem, calc(-0.93rem + -0.98vw), -1.625rem);
+            width: clamp(6.75rem, calc(4.335rem + 12.07vw), 12.938rem);
+            height: 515px;
+            z-index: 6;
+            background: url('../img/information/decor-trip.png') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__lux-img {
+        position: relative;
+        border-radius: 15px;
+        z-index: 5;
+        width: clamp(9.5rem, calc(7.232rem + 11.34vw), 15.313rem);
+        height: clamp(21.188rem, calc(16.114rem + 25.37vw), 34.188rem);
+    }
+
+    &__lux-block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__lux-title-block {
+        max-width: 352px;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: clamp(1.25rem, calc(0.762rem + 2.44vw), 2.5rem);
+        line-height: clamp(1.25rem, calc(0.762rem + 2.44vw), 2.5rem);
+
+        color: $darkBlue;
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+    }
+
+    &__lux-button {
+        margin-top: 57px;
+        padding: 10px 31px;
+        width: max-content;
+
+        background: none;
+        border: 0.624428px solid $darkBlue;
+        border-radius: 61.3171px;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        
+        letter-spacing: 0.04em;
+        text-transform: uppercase;  
+        
+        color: $darkBlue;
+        transition: .5s;
+
+        &:hover {
+            background: $white;
+            border: 0.624428px solid $white;
+        }
+
+        @media (max-width: 480px) {
+           display: none;
+        }
+    }
+
+    &__lux-mob {
+        display: none;
+        @media (max-width: 480px) {
+            display: block;
+             width: 100%;
+         }
+    }
+
+}
+
+// Customise
+
+.customise-block {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 500px;
+        background-image: url('../img/subscribe/bac.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 1130px;
+        z-index: -2;
+    }
+}
+
+.customise {
+    margin-top: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__block-paragraph {
+        counter-reset: steps;
+    }
+
+    &__customise-title {
+        margin-bottom: 68px;
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: clamp(2.5rem, calc(2.045rem + 2.27vw), 3.75rem);
+        line-height: 58px;
+        text-align: center;
+
+        color: $darkBlue;
+    }
+
+    &__describe {
+        position: relative;
+        padding-top: 22px;
+        padding-left: clamp(8.438rem, calc(7.119rem + 6.59vw), 12.063rem);
+        &:not(:last-child) {
+            margin-bottom: 95px;
+            &::after {
+                top: 211px;
+                bottom: -95px;
+                left: 55px;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-left: 1px solid #fff;
+            pointer-events: none;
+        }
+    }
+
+    &__describe-title {
+        margin-bottom: 17px;
+        font-family: 'Forum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 98.5%;
+
+        color: $darkBlue
+    }
+
+    &__describe-text {
+        max-width: 321px;
+        width: 100%;
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 179.8%;
+
+        color: $black;
+    }
+
+    &__describe-imgs {
+        top: 14px;
+        width: 115px;
+        height: 180px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        &::before {
+            counter-increment: steps;
+            content: counter(steps);
+            font-family: 'Forum';
+            font-weight: 400;
+            font-size: 73px;
+            line-height: 98.5%;
+            text-align: center;
+        }
+    }
+
+    &__describe-span {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(1.15);
+        pointer-events: none;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 36px;
+            left: -5px;
+            width: 111px;
+            height: 111px;
+            border: 1px solid #fff;
+            transform: rotate(45deg) skew(20deg,20deg);
+        }
+    }
+
+    &__describe-number {
+        width: 115px;
+        height: 219px;
+        position: relative;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: 73px;
+        line-height: 9.8;
+
+        color: $darkBlue;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: -5px;
+            width: 111px;
+            height: 111px;
+            border: 1px solid #fff;
+            transform: rotate(45deg) skew(20deg,20deg);
+        }
+    }
+
+    // button 
+
+    &__customise-button {
+        margin-top: 78px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__click-button {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1.5px solid $darkBlue;
+        padding: 14px clamp(3.188rem, calc(0.96rem + 11.14vw), 9.313rem);
+
+        background: $darkBlue;
+        border-radius: 74px;
+
+        font-family: 'Forum';
+        font-weight: 400;
+        font-size: clamp(1.063rem, calc(0.903rem + 0.8vw), 1.5rem);
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;
+        transition: .4s ease;
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -21px;
+            background: url('../img/information/decore-button.svg') no-repeat;
+            background-size: contain;
+            max-width: 486px;
+            width: 100%;
+            height: 99px;
+            z-index: -1;
+        }
+    }
+
+    &__text-b {
+        margin-top: 18px;
+        font-family: 'Manrope';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 179.8%;
+
+        color: $darkBlue;
+    }
+
+    // decore 
+
+    &__cloudOne {
+        position: absolute;
+        width: 744px;
+        height: 552px;
+        bottom: 220px;
+        background-repeat: no-repeat;
+        left: -243px;
+        z-index: -1;
+    }
+
+    &__cloudTwo{
+        position: absolute;
+        width: 100%;
+        height: 1248px;
+        background-repeat: no-repeat;
+        top: -220px;
+        right: calc(-44vw - 104px);
+        z-index: -1;
+    }
+
+}
+
+//////////////////
+
+.trip-block {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        background-image: url('../img/information/bg_whyluxtrip.png');
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 1608px;
+        z-index: -2;
+    }
+}
