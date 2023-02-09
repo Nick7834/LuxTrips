@@ -10,6 +10,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother) // Регистрируем �
 ScrollSmoother.create({
     wrapper: ".wrapper",
     content: ".content",
+     smooth: 1,
+    ignoreMobileResize: true,
+    effects: true,
+    preventDefault: true
 });
 
 // header fixed 
