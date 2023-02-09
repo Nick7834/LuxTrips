@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother) // Регистрируем плагин 
 ScrollSmoother.create({
     wrapper: ".wrapper",
-    content: ".scroll",
+    content: ".content",
 });
 
 // header fixed 
