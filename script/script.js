@@ -1,8 +1,8 @@
 // Prallax
 
-window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
-});
+// window.addEventListener('scroll', () => {
+//     document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
+// });
 
 // Scroll
 
