@@ -1,20 +1,20 @@
 // Prallax
 
-// window.addEventListener('scroll', () => {
-//     document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
-// });
+window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`)
+});
 
 // Scroll
 
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother) // Регистрируем плагин 
-// ScrollSmoother.create({
-//     wrapper: ".wrapper",
-//     content: ".content",
-//      smooth: 1,
-//     ignoreMobileResize: true,
-//     effects: true,
-//     preventDefault: true
-// });
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother) // Регистрируем плагин 
+ScrollSmoother.create({
+    wrapper: ".wrapper",
+    content: ".content",
+     smooth: 1,
+    ignoreMobileResize: true,
+    effects: true,
+    preventDefault: true
+});
 
 // header fixed 
 
